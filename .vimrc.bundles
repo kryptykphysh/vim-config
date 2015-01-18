@@ -1,0 +1,58 @@
+" vim: set sw=4 ts=4 sts=4 et :
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" Vundle
+Plugin 'gmarik/Vundle.vim'
+
+" Basics
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'bling/vim-airline'
+Plugin 'Yggdroot/indentLine'
+Plugin 'mhinz/vim-signify'
+Plugin 'scrooloose/syntastic'
+Plugin 'mattn/gist-vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'godlygeek/tabular'
+Plugin 'myusuf3/numbers.vim'
+
+" Not so basics
+Plugin 'scrooloose/nerdtree'
+Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'Lokaltog/vim-easymotion'
+
+" Python
+Plugin 'klen/python-mode'
+
+" Haml/Rails
+Plugin 'tpope/vim-haml'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-bundler'
+Plugin 'tpope/vim-rake'
+Plugin 'tpope/vim-projectionist'
+let g:rubycomplete_buffer_loading = 1
+let g:rubycomplete_classes_in_global = 1
+let g:rubycomplete_rails = 1
+
+" Nodejs
+Plugin 'digitaltoad/vim-jade'
+Plugin 'kchmck/vim-coffee-script'
+
+" Sass
+Plugin 'cakebaker/scss-syntax.vim'
+
+" Misc
+Plugin 'tpope/vim-markdown'
+Plugin 'rodjek/vim-puppet'
+
+" PowerShell
+Plugin 'PProvost/vim-ps1'
+
+" Requirement for gist-vim
+Plugin 'mattn/webapi-vim'
+
+" End vundle
+call vundle#end()
+filetype plugin indent on
