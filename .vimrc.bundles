@@ -26,6 +26,10 @@ Plugin 'Lokaltog/vim-easymotion'
 " Python
 Plugin 'klen/python-mode'
 
+" Golang
+" Requires :GoInstallBinaries to be run
+Plugin 'fatih/vim-go'
+
 " Haml/Rails
 Plugin 'tpope/vim-haml'
 Plugin 'tpope/vim-rails'
