@@ -1,2 +1,0 @@
-set clipboard=unnamed
-let g:gist_clip_command = 'pbcopy'
