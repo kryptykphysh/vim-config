@@ -4,12 +4,21 @@
             \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
         autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
     endif
+" }
 
-    call plug#begin('~/.vim/plugged')
+call plug#begin('~/.vim/plugged')
+" Airline adds a funky status bar {
+	Plug 'vim-airline/vim-airline'
+	Plug 'vim-airline/vim-airline-themes'
+	Plug 'edkolev/tmuxline.vim'
+	Plug 'bling/vim-bufferline'
+" }
+
+" Deoplete provides autocomplete functionality {
     Plug 'roxma/nvim-yarp'
     Plug 'roxma/vim-hug-neovim-rpc'
     Plug 'Shougo/deoplete.nvim'
-    Plug 'deoplete-plugins/deoplete-go', { 'do': 'make' }
-    Plug 'carlitux/deoplete-ternjs', { 'do': 'yarn global add tern' }
-    call plug#end()
+    Plug 'deoplete-plugins/deoplete-go', { 'do': 'make' }		" NodeJS autocomplete
+    Plug 'carlitux/deoplete-ternjs', { 'do': 'yarn global add tern' }	" GoLang autocomplete
 " }
+call plug#end()
