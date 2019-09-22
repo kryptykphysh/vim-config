@@ -84,6 +84,7 @@
 " }
 
 source ./.vim/plugins.vim		" Load vim-plug and plugins
+call deoplete#custom#option('omni_patterns', { 'go': '[^. *\t]\.\w*' }) " Use omni completion for Go files
 
 " Key remappings {
     " Swap arrow keys to pane navigation in normal mode

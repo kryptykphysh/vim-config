@@ -34,3 +34,5 @@ There's a little bit of setup for this one, but well worth it. It's fast as fudg
 - [The Silver Searcher](https://github.com/ggreer/the_silver_searcher) Not actually required, but really useful.
 
 ### [CtrlP Search](https://github.com/ctrlpvim/ctrlp.vim)
+
+### [Deoplete](https://github.com/Shougo/deoplete.nvim) For Code Completion
