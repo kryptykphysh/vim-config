@@ -33,6 +33,10 @@ call plug#begin('~/.vim/plugged')
 
 	let g:ctrlp_map = '<c-p>'
 	let g:ctrlp_cmd = 'CtrlP'
+	let g:ctrlp_match_window = 'bottom,order:ttb'			" Order file matches top to bottom
+	let g:ctrlp_switch_buffer = 0					" Always open files in new buffer
+	let g:ctrlp_working_path_mode = 0				" Changes wkdir and CtrlP recognises change
+	let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'	" Let CtrlP use Ag for searches
 " }
 
 " Deoplete provides autocomplete functionality {
