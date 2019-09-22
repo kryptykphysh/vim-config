@@ -12,6 +12,10 @@ call plug#begin('~/.vim/plugged')
 	Plug 'vim-airline/vim-airline-themes'
 	Plug 'edkolev/tmuxline.vim'
 	Plug 'bling/vim-bufferline'
+
+	let g:airline_theme = 'badwolf'
+	let g:airline_powerline_fonts = 1
+	let g:airline_extensions#tabline#enabled = 1
 " }
 
 " Deoplete provides autocomplete functionality {
