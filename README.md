@@ -26,3 +26,5 @@ As a bonus you should now be able to copy from and to your Windows clipboard fro
 ## Plugins
 Somewhat under the radar, Vundle seems to have been superceded by [vim-plug](https://github.com/junegunn/vim-plug), so that's what I'm going to use here.
 
+
+### [CtrlP Search](https://github.com/ctrlpvim/ctrlp.vim)

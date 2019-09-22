@@ -18,6 +18,13 @@ call plug#begin('~/.vim/plugged')
 	let g:airline_extensions#tabline#enabled = 1
 " }
 
+" CtrlPVim for path searching {
+	Plug 'ctrlpvim/ctrlp.vim'
+
+	let g:ctrlp_map = '<c-p>'
+	let g:ctrlp_cmd = 'CtrlP'
+" }
+
 " Deoplete provides autocomplete functionality {
     Plug 'roxma/nvim-yarp'
     Plug 'roxma/vim-hug-neovim-rpc'
