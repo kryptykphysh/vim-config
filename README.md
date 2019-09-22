@@ -26,5 +26,11 @@ As a bonus you should now be able to copy from and to your Windows clipboard fro
 ## Plugins
 Somewhat under the radar, Vundle seems to have been superceded by [vim-plug](https://github.com/junegunn/vim-plug), so that's what I'm going to use here.
 
+### [Ack.vim](https://github.com/mileszs/ack.vim)
+There's a little bit of setup for this one, but well worth it. It's fast as fudge searching throuugh files and finding text matches inside.
+
+#### Requirements
+- [Ack](https://beyondgrep.com/install)
+- [The Silver Searcher](https://github.com/ggreer/the_silver_searcher) Not actually required, but really useful.
 
 ### [CtrlP Search](https://github.com/ctrlpvim/ctrlp.vim)

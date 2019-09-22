@@ -7,6 +7,16 @@
 " }
 
 call plug#begin('~/.vim/plugged')
+
+" Ack-Grep for searching in files {
+	Plug 'mileszs/ack.vim'
+
+	" Fallback to search with Ack if the Silver Searcher is not available
+	if executable('ag')
+		let g:ackprg = 'ag --vimgrep'
+	endif
+" }
+
 " Airline adds a funky status bar {
 	Plug 'vim-airline/vim-airline'
 	Plug 'vim-airline/vim-airline-themes'
