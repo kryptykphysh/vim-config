@@ -16,6 +16,10 @@
             autocmd VimEnter * highlight clear SignColumn
             autocmd BufWritePre *.php,*.py,*.js,*.txt,*.hs,*.java,*.md
                         \:call <SID>StripTrailingWhitespaces()
+            autocmd FileType go setlocal noexpandtab
+            autocmd FileType go setlocal list
+            autocmd FileType go setlocal listchars=tab:+\ ,eol:-
+            autocmd FileType go setlocal formatprg=par\ -w80\ -T4
             autocmd FileType java setlocal noexpandtab
             autocmd FileType java setlocal list
             autocmd FileType java setlocal listchars=tab:+\ ,eol:-

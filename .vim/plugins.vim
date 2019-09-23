@@ -69,6 +69,10 @@ call plug#begin('~/.vim/plugged')
     Plug 'carlitux/deoplete-ternjs', { 'do': 'yarn global add tern' }	" GoLang autocomplete
 " }
 
+" Fugitive gives us all the Git goodness {
+    Plug 'tpope/vim-fugitive'
+" }
+
 " GoLang Related {
     Plug 'deoplete-plugins/deoplete-go', { 'do': 'make' }		        " NodeJS autocomplete
     Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
