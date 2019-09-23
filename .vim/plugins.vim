@@ -69,6 +69,12 @@ call plug#begin('~/.vim/plugged')
     Plug 'carlitux/deoplete-ternjs', { 'do': 'yarn global add tern' }	" GoLang autocomplete
 " }
 
+" Emmet for HTML joy {
+    Plug 'mattn/emmet-vim'
+    " Redefine Emmet trigger from <C-y> to ,
+    let g:user_emmet_leader_key = ','
+" }
+
 " Fugitive gives us all the Git goodness {
     Plug 'tpope/vim-fugitive'
 " }
