@@ -87,7 +87,7 @@
     set writebackup
 " }
 
-source ./.vim/plugins.vim		" Load vim-plug and plugins
+source ~/.vim/plugins.vim		" Load vim-plug and plugins
 call deoplete#custom#option('omni_patterns', { 'go': '[^. *\t]\.\w*' }) " Use omni completion for Go files
 
 " Key remappings {
