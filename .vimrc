@@ -29,12 +29,20 @@
             autocmd FileType ruby setlocal softtabstop=2
             autocmd FileType ruby setlocal commentstring=#\ %s
             autocmd FileType python setlocal commentstring=#\ %s
+            autocmd FileType ruby setlocal tabstop=2
+            autocmd FileType ruby setlocal shiftwidth=2
+            autocmd FileType ruby setlocal softtabstop=2
             autocmd BufEnter *.cls setlocal filetype=java
             autocmd BufEnter *.zsh-theme setlocal filetype=zsh
             autocmd BufEnter Makefile setlocal noexpandtab
             autocmd BufEnter *.sh setlocal tabstop=2
             autocmd BufEnter *.sh setlocal shiftwidth=2
             autocmd BufEnter *.sh setlocal softtabstop=2
+            " add yaml stuffs
+            au! BufNewFile,BufReadPost *.{yaml,yml} set filetype=yaml foldmethod=indent
+            autocmd FileType yaml setlocal tabstop=2
+            autocmd FileType yaml setlocal shiftwidth=2
+            autocmd FileType yaml setlocal expandtab
         augroup END
     " }
 " }
