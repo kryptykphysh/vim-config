@@ -3,35 +3,48 @@
 	colorscheme badwolf
 	set termguicolors
 " }
-
+        
 " Tabs and spaces {
-	set tabstop=4			    " number of visual spaces per TAB
-	set softtabstop=4		    " number of spaces in TAB when editing
+  set encoding=utf-8
+	set tabstop=2			    " number of visual spaces per TAB
+	set softtabstop=2		  " number of spaces in TAB when editing
 	set expandtab			    " convert TABs to spaces
-    filetype indent on          " load filtype specific indent files
+  filetype indent on    " load filetype specific indent files
+  filetype plugin on
 
     " Language specific options {
         augroup configgroup
             autocmd!
             autocmd VimEnter * highlight clear SignColumn
-            autocmd BufWritePre *.php,*.py,*.js,*.txt,*.hs,*.java,*.md
+            autocmd BufWritePre *.php,*.py,*.js,*.txt,*.hs,*.java,*.md,*.rb
                         \:call <SID>StripTrailingWhitespaces()
             autocmd FileType java setlocal noexpandtab
             autocmd FileType java setlocal list
             autocmd FileType java setlocal listchars=tab:+\ ,eol:-
             autocmd FileType java setlocal formatprg=par\ -w80\ -T4
+            autocmd FileType json setlocal autoindent
+            autocmd FileType json setlocal formatoptions=tcq2
+            autocmd FileType json setlocal textwidth=78 shiftwidth=2
+            autocmd FileType json setlocal softtabstop=2 tabstop=8
+            autocmd FileType json setlocal expandtab
+            autocmd FileType json setlocal foldmethod=syntax
             autocmd FileType php setlocal expandtab
             autocmd FileType php setlocal list
             autocmd FileType php setlocal listchars=tab:+\ ,eol:-
             autocmd FileType php setlocal formatprg=par\ -w80\ -T4
             autocmd FileType ruby setlocal tabstop=2
+            autocmd FileType ruby setlocal autoindent
             autocmd FileType ruby setlocal shiftwidth=2
             autocmd FileType ruby setlocal softtabstop=2
+            autocmd FileType ruby setlocal expandtab
             autocmd FileType ruby setlocal commentstring=#\ %s
+            autocmd FileType *.rb setlocal autoindent
+            autocmd FileType *.rb setlocal tabstop=2
+            autocmd FileType *.rb setlocal shiftwidth=2
+            autocmd FileType *.rb setlocal softtabstop=2
+            autocmd FileType *.rb setlocal expandtab
+            autocmd FileType *.rb setlocal commentstring=#\ %s
             autocmd FileType python setlocal commentstring=#\ %s
-            autocmd FileType ruby setlocal tabstop=2
-            autocmd FileType ruby setlocal shiftwidth=2
-            autocmd FileType ruby setlocal softtabstop=2
             autocmd BufEnter *.cls setlocal filetype=java
             autocmd BufEnter *.zsh-theme setlocal filetype=zsh
             autocmd BufEnter Makefile setlocal noexpandtab
@@ -43,11 +56,22 @@
             autocmd FileType yaml setlocal tabstop=2
             autocmd FileType yaml setlocal shiftwidth=2
             autocmd FileType yaml setlocal expandtab
-        augroup END
+            autocmd FileType go setlocal tabstop=4
+            autocmd FileType go setlocal shiftwidth=4
+            autocmd FileType go setlocal expandtab
+            autocmd FileType xml setlocal tabstop=2
+            autocmd FileType xml setlocal shiftwidth=2
+            autocmd FileType xml setlocal expandtab
+            autocmd FileType xml let g:xml_syntax_folding=1
+            autocmd FileType xml setlocal foldmethod=syntax
+            autocmd FileType xml :syntax on
+            autocmd FileType xml :%foldopen!
+    augroup END
     " }
 " }
 
 " UI {
+  let NERDTreeShowHidden=1    " allow NERDTree to display dot files
 	set number relativenumber   " show line numbers
     " Toggle to absolute line numbers when pane loses focus
     augroup numbertoggle
@@ -92,7 +116,7 @@
 " }
 
 source ~/.vim/plugins.vim		" Load vim-plug and plugins
-call deoplete#custom#option('omni_patterns', { 'go': '[^. *\t]\.\w*' }) " Use omni completion for Go files
+" call deoplete#custom#option('omni_patterns', { 'go': '[^. *\t]\.\w*' }) " Use omni completion for Go files
 
 " Key remappings {
     " Swap arrow keys to pane navigation in normal mode

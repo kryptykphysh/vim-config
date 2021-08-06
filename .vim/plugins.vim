@@ -41,34 +41,8 @@ Plug 'davidhalter/jedi-vim'
 	let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'	    " Let CtrlP use Ag for searches
 " }
 
-" Deoplete provides autocomplete functionality {
-    Plug 'roxma/nvim-yarp'
-    Plug 'roxma/vim-hug-neovim-rpc'
-    Plug 'Shougo/deoplete.nvim'
-    let g:deoplete#enable_at_startup = 1
-    Plug 'Shougo/neosnippet.vim'
-    Plug 'Shougo/neosnippet-snippets'
-    " Plugin key-mappings.
-    " Note: It must be "imap" and "smap".  It uses <Plug> mappings.
-    imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-    smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-    xmap <C-k>     <Plug>(neosnippet_expand_target)
-    
-    " SuperTab like snippets behavior.
-    " Note: It must be "imap" and "smap".  It uses <Plug> mappings.
-    "imap <expr><TAB>
-    " \ pumvisible() ? "\<C-n>" :
-    " \ neosnippet#expandable_or_jumpable() ?
-    " \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-    smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-    \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-    
-    " For conceal markers.
-    if has('conceal')
-      set conceallevel=2 concealcursor=niv
-    endif
-
-    Plug 'carlitux/deoplete-ternjs', { 'do': 'yarn global add tern' }	" GoLang autocomplete
+" YouCompleteMe for code completion {
+    Plug 'ycm-core/YouCompleteMe'
 " }
 
 " Emmet for HTML joy {
@@ -78,7 +52,7 @@ Plug 'davidhalter/jedi-vim'
 " }
 
 " Fugitive gives us all the Git goodness {
-    Plug 'tpope/vim-fugitive'
+"    Plug 'tpope/vim-fugitive'
 " }
 
 " GoLang Related {
@@ -86,10 +60,27 @@ Plug 'davidhalter/jedi-vim'
     Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 " }
 
+" Rust Related {
+    Plug 'rust-lang/rust.vim'
+    let g:rustfmt_autosave = 1 " Requires rustfmt to be installed
+" }
+
 " NERDTree directory display {
     Plug 'scrooloose/nerdtree'
     map <F2> :NERDTreeToggle<CR>
     autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" }
+
+" ALE Linting {
+    Plug 'dense-analysis/ale'
+
+    let g:ale_linters = {
+          \ 'ruby': ['standardrb', 'rubocop'],
+          \}
+    let g:ale_fixers = {
+          \ 'ruby': ['standardrb'],
+          \}
+    let g:ale_fix_on_save = 1
 " }
 
 call plug#end()

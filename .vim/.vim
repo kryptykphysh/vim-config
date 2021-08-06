@@ -1,0 +1,1 @@
+/home/kryptykphysh/code/vim-config/.vim
