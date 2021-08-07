@@ -9,6 +9,7 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'davidhalter/jedi-vim'
+Plug 'airblade/vim-gitgutter'
 
 " Ack-Grep for searching in files {
 	Plug 'mileszs/ack.vim'
