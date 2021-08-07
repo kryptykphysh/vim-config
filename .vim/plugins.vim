@@ -83,4 +83,12 @@ Plug 'davidhalter/jedi-vim'
     let g:ale_fix_on_save = 1
 " }
 
+" }
+" TypeScript nonsense
+    Plug 'pangloss/vim-javascript'
+    Plug 'leafgarland/typescript-vim'
+    Plug 'maxmellon/vim-jsx-pretty'
+    Plug 'jparise/vim-graphql'
+" }
+
 call plug#end()

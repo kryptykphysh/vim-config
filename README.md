@@ -36,3 +36,9 @@ There's a little bit of setup for this one, but well worth it. It's fast as fudg
 ### [CtrlP Search](https://github.com/ctrlpvim/ctrlp.vim)
 
 ### [Deoplete](https://github.com/Shougo/deoplete.nvim) For Code Completion
+
+### [YouCompleteMe](https://github.com/ycm-core/YouCompleteMe)
+Insanely useful. Do the setup. Do it now!
+
+### [VimGo](https://github.com/fatih/vim-go)
+Run `:GoInstallBinaries` in Vim after installing the plugin.
