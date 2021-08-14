@@ -16,12 +16,24 @@
         augroup configgroup
             autocmd!
             autocmd VimEnter * highlight clear SignColumn
-            autocmd BufWritePre *.php,*.py,*.js,*.txt,*.hs,*.java,*.md,*.rb
+            autocmd BufWritePre *.php,*.py,*.txt,*.hs,*.java,*.md,*.rb
                         \:call <SID>StripTrailingWhitespaces()
             autocmd FileType java setlocal noexpandtab
             autocmd FileType java setlocal list
             autocmd FileType java setlocal listchars=tab:+\ ,eol:-
             autocmd FileType java setlocal formatprg=par\ -w80\ -T4
+            autocmd FileType javascript setlocal tabstop=2
+            autocmd FileType javascript setlocal autoindent
+            autocmd FileType javascript setlocal shiftwidth=2
+            autocmd FileType javascript setlocal softtabstop=2
+            autocmd FileType javascript setlocal expandtab
+            autocmd FileType javascript setlocal commentstring=//\ %s
+            autocmd FileType typescript setlocal tabstop=2
+            autocmd FileType typescript setlocal autoindent
+            autocmd FileType typescript setlocal shiftwidth=2
+            autocmd FileType typescript setlocal softtabstop=2
+            autocmd FileType typescript setlocal expandtab
+            autocmd FileType typescript setlocal commentstring=//\ %s
             autocmd FileType json setlocal autoindent
             autocmd FileType json setlocal formatoptions=tcq2
             autocmd FileType json setlocal textwidth=78 shiftwidth=2

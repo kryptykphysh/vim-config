@@ -10,6 +10,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'davidhalter/jedi-vim'
 Plug 'airblade/vim-gitgutter'
+Plug 'slim-template/vim-slim'
 
 " Ack-Grep for searching in files {
 	Plug 'mileszs/ack.vim'
@@ -57,7 +58,7 @@ Plug 'airblade/vim-gitgutter'
 " }
 
 " GoLang Related {
-    Plug 'deoplete-plugins/deoplete-go', { 'do': 'make' }		        " NodeJS autocomplete
+"    Plug 'deoplete-plugins/deoplete-go', { 'do': 'make' }		        " NodeJS autocomplete
     Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 " }
 
@@ -87,6 +88,10 @@ Plug 'airblade/vim-gitgutter'
 " }
 " TypeScript nonsense
     Plug 'pangloss/vim-javascript'
+    augroup javascript_folding
+        au!
+        au FileType javascript setlocal foldmethod=syntax
+    augroup END
     Plug 'leafgarland/typescript-vim'
     Plug 'maxmellon/vim-jsx-pretty'
     Plug 'jparise/vim-graphql'
