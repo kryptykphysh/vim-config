@@ -11,6 +11,10 @@ call plug#begin('~/.vim/plugged')
 Plug 'davidhalter/jedi-vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'slim-template/vim-slim'
+Plug 'mustache/vim-mustache-handlebars'
+Plug 'mattn/webapi-vim'
+Plug 'mattn/vim-gist'
+let g:mustach_abbreviations = 1
 
 " Ack-Grep for searching in files {
 	Plug 'mileszs/ack.vim'
