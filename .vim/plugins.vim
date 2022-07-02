@@ -101,4 +101,8 @@ let g:mustach_abbreviations = 1
     Plug 'jparise/vim-graphql'
 " }
 
+" GitHub CoPilot
+"  Plug 'github/copilot.vim'
+" }
+
 call plug#end()
