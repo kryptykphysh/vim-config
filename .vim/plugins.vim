@@ -45,6 +45,7 @@ let g:mustach_abbreviations = 1
 	let g:ctrlp_switch_buffer = 0					                    " Always open files in new buffer
 	let g:ctrlp_working_path_mode = 0				                    " Changes wkdir and CtrlP recognises change
 	let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'	    " Let CtrlP use Ag for searches
+  let g:ctrlp_custom_ignore = {'dir':  '\v[\/]\.(git|hg|svn)$','file': '\v\.(exe|so|dll|swp)$','link': '',}
 " }
 
 " YouCompleteMe for code completion {
